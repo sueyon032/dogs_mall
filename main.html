@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <!--css,js불러오기-->
+    <link rel= "stylesheet" href= "main.css">
+    <script src="main.js" defer></script>
+
+    <link rel="icon" href="images/logo_moel.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <title>멍뭉이들</title>
+</head>
+<body>
+    <div class="header">
+        <img src="images/logo.png" id="logo">
+        <form>
+           <input type="text" name="query" placeholder="Search"  class="search">
+            <button type="submit" id="search_button"><img src="images/searchbtn1.png" onmouseover="this.src='images/searchbtn2.png'" onmouseout="this.src='images/searchbtn1.png'"></button>
+        </form>
+        <ul>
+          <li><a href="#">Cart</a></li>
+          <li>|</li>
+          <li><a href="#">Like</a></li>
+          <li>|</li>
+          <li><a href="#">Login</a></li> 
+          <li>|</li>    
+          <li><a href="#">Join</a></li>
+        </ul>
+    </div>
+
+    <hr id="headhr">
+
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">의류</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">침구 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">간식</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">장난감</a>
+        </li>
+      </ul>
+
+
+    <hr id="mhr">
+
+    <div id="slideShow">
+      <ul class="slides">
+        <li><img src="images/screen1.png" alt=""></li>
+        <li><img src="images/screen2.png" alt=""></li>
+        <li><img src="images/screen3.png" alt=""></li>
+        <li><img src="images/screen4.png" alt=""></li>
+        <li><img src="images/screen5.png" alt=""></li>
+        <li><img src="images/screen6.png" alt=""></li>
+      </ul>  
+      <p class="controller">
+        
+        <!-- &lang: 왼쪽 방향 화살표
+        &rang: 오른쪽 방향 화살표 -->
+        <span class="prev">&lang;</span>  
+        <span class="next">&rang;</span>
+      </p>
+    </div>
+    <script src="main.js"></script>
+    
+    
+</body>
+</html>
