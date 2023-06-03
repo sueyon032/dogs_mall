@@ -62,7 +62,7 @@
      font-weight: bold;
  }
 
- @media (max-width: 767px) {
+ @media screen and (max-width: 767px) {
 
      /*모바일폰*/
      #logo {
@@ -111,7 +111,7 @@
      }
  }
 
- @media (min-width: 768px) {
+ @media screen and (min-width: 768px) {
      /*태블릿*/
 
      #logo {
@@ -156,7 +156,7 @@
      }
  }
 
- @media (min-width: 992px) {
+ @media screen and (min-width: 992px) {
 
      /*데스크탑(노트북)*/
      #logo {
@@ -202,7 +202,7 @@
  }
 
 
- @media (min-width: 1200px) {
+ @media screen and (min-width: 1200px) {
 
      /* 데스크탑 */
      #logo {
@@ -219,81 +219,87 @@
 
  }
 
- li{
-    list-style-type: none;
-  }
-  
-  /* 보여줄 구간의 높이와 넓이 설정 */
-  #slideShow{
-    width: 500px;
-    height: 300px;
+ .slider-wrapper {
+    margin: 0;
     position: relative;
-    margin: 50px auto;
-    overflow: hidden;   
-    /*리스트 형식으로 이미지를 일렬로 
-    정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
-    hidden으로 숨겨줘야됨*/
+    overflow: hidden;
   }
   
+  .slides-container {
+    height: 467px;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
   
-  .slides{
+  .slide-arrow {
     position: absolute;
-    left: 0;
+    display: flex;
     top: 0;
-    width: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
-    transition: left 0.5s ease-out; 
-    /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
-  }
-  
-  /* 첫 번째 슬라이드 가운데에 정렬하기위해
-  첫번째 슬라이드만 margin-left조정 */
-  .slides li:first-child{
-    margin-left: 100px;
-  }
-  
-  /* 슬라이드들 옆으로 정렬 */
-  .slides li:not(:last-child){
-    float: left;
-    margin-right: 100px;
-  }
-  
-  .slides li{
-    float: left;
-  }
-  
-  .controller span{
-    position:absolute;
-    background-color: transparent;
-    color: black;
-    text-align: center;
-    border-radius: 50%;
-    padding: 10px 20px;
-    top: 50%;
-    font-size: 1.3em;
+    bottom: 0;
+    margin: auto;
+    height: 4rem;
+    background-color: white;
+    border: none;
+    width: 2rem;
+    font-size: 3rem;
+    padding: 0;
     cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
   }
   
-  /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
-  .controller span:hover{
-    background-color: rgba(128, 128, 128, 0.11);
+  .slide-arrow:hover,
+  .slide-arrow:focus {
+    opacity: 1;
   }
   
-  .prev{
-    left: 10px;
+  #slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
   }
   
-  /* 이전 화살표에 마우스 커서가 올라가 있을때 
-  이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
-  .prev:hover{
-    transform: translateX(-10px);
+  #slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
   }
   
-  .next{
-    right: 10px;
+  .slide {
+    width: 100%;
+    height: 440px;
+    flex: 1 0 100%;
+    background-position: center;
   }
   
-  /* 다음 화살표에 마우스 커서가 올라가 있을때 
-  이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
-  .next:hover{
-    transform: translateX(10px);
+  .slide:nth-child(1) {
+    background-image: url("images/screen1.png");
   }
+  
+  .slide:nth-child(2) {
+    background-image: url("images/screen2.png");
+  }
+  
+  .slide:nth-child(3) {
+    background-image: url("images/screen3.png");
+  }
+  
+  .slide:nth-child(4) {
+    background-image: url("images/screen4.png");
+  }
+  
+  .slide:nth-child(5) {
+    background-image: url("images/screen5.png");
+  }
+  
+  .slide:nth-child(6) {
+    background-image: url("images/screen6.png");
+  }
+  

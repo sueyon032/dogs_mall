@@ -15,6 +15,7 @@
     <link rel= "stylesheet" href= "main.css">
     <script src="main.js" defer></script>
 
+    <!--창아이콘-->
     <link rel="icon" href="images/logo_moel.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
@@ -58,25 +59,22 @@
 
     <hr id="mhr">
 
-    <div id="slideShow">
-      <ul class="slides">
-        <li><img src="images/screen1.png" alt=""></li>
-        <li><img src="images/screen2.png" alt=""></li>
-        <li><img src="images/screen3.png" alt=""></li>
-        <li><img src="images/screen4.png" alt=""></li>
-        <li><img src="images/screen5.png" alt=""></li>
-        <li><img src="images/screen6.png" alt=""></li>
-      </ul>  
-      <p class="controller">
-        
-        <!-- &lang: 왼쪽 방향 화살표
-        &rang: 오른쪽 방향 화살표 -->
-        <span class="prev">&lang;</span>  
-        <span class="next">&rang;</span>
-      </p>
-    </div>
-    <script src="main.js"></script>
-    
-    
+    <section class="slider-wrapper">
+      <button class="slide-arrow" id="slide-arrow-prev">
+        &#8249;
+      </button>
+      <button class="slide-arrow" id="slide-arrow-next">
+        &#8250;
+      </button>
+      <ul class="slides-container" id="slides-container">
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+      </ul>
+    </section>
+
 </body>
 </html>
