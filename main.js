@@ -1,21 +1,45 @@
-const slidesContainer = document.getElementById("slides-container");
-const slide = document.querySelector(".slide");
-const prevButton = document.getElementById("slide-arrow-prev");
-const nextButton = document.getElementById("slide-arrow-next");
+const slidesContainer = document.getElementById('slides-container');
+const slides = slidesContainer.getElementsByClassName('slide');
+const slideCount = slides.length;
+let currentIndex = 0;
+let slideInterval;
 
-// /*slide무한반복*/
-// const slides = slidesContainer.querySelectorAll('.slide');
-// slides.forEach((slide) => {
-//   const cloneSlide = slide.cloneNode(true);
-//   slidesContainer.appendChild(cloneSlide);
-// });
+function showSlide(index) {
+  for (let i = 0; i < slideCount; i++) {
+    slides[i].style.display = 'none';
+  }
 
-nextButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft += slideWidth;
+  slides[index].style.display = 'block';
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slideCount;
+  showSlide(currentIndex);
+}
+
+function previousSlide() {
+  currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+  showSlide(currentIndex);
+}
+
+function startSlideShow() {
+  slideInterval = setInterval(nextSlide, 3000); // 3초마다 자동으로 다음 슬라이드로 전환
+}
+
+function stopSlideShow() {
+  clearInterval(slideInterval);
+}
+
+document.getElementById('slide-arrow-next').addEventListener('click', function() {
+  stopSlideShow(); // 버튼 클릭 시 자동 슬라이드 전환 중지
+  nextSlide();
+  startSlideShow(); // 다음 슬라이드 이후 자동 슬라이드 전환 재개
 });
 
-prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth;
+document.getElementById('slide-arrow-prev').addEventListener('click', function() {
+  stopSlideShow(); // 버튼 클릭 시 자동 슬라이드 전환 중지
+  previousSlide();
+  startSlideShow(); // 이전 슬라이드 이후 자동 슬라이드 전환 재개
 });
+
+startSlideShow(); // 페이지 로드 시 자동 슬라이드 전환 시작
