@@ -1,82 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 합쳐지고 최소화된 최신 CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <!-- 부가적인 테마 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 합쳐지고 최소화된 최신 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- 부가적인 테마 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <!--css,js불러오기-->
-    <link rel= "stylesheet" href= "main.css">
-    <script src="main.js" defer></script>
+  <!--css,js불러오기-->
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
 
-    <!--창아이콘-->
-    <link rel="icon" href="images/logo_moel.png" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
-    <title>멍뭉이들</title>
+  <!--창아이콘-->
+  <link rel="icon" href="images/logo_moel.png" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <title>멍뭉이들</title>
 </head>
+
 <body>
-    <div class="header">
-        <img src="images/logo.png" id="logo">
-        <form>
-           <input type="text" name="query" placeholder="Search"  class="search">
-            <button type="submit" id="search_button"><img src="images/searchbtn1.png" onmouseover="this.src='images/searchbtn2.png'" onmouseout="this.src='images/searchbtn1.png'"></button>
-        </form>
-        <ul>
-          <li><a href="#">Cart</a></li>
-          <li>|</li>
-          <li><a href="#">Like</a></li>
-          <li>|</li>
-          <li><a href="#">Login</a></li> 
-          <li>|</li>    
-          <li><a href="#">Join</a></li>
-        </ul>
+  <div class="header">
+    <img src="images/logo.png" id="logo">
+    <form>
+      <input type="text" name="query" placeholder="Search" class="search">
+      <button type="submit" id="search_button"><img src="images/searchbtn1.png"
+          onmouseover="this.src='images/searchbtn2.png'" onmouseout="this.src='images/searchbtn1.png'"></button>
+    </form>
+    <ul>
+      <li><a href="#">Cart</a></li>
+      <li>|</li>
+      <li><a href="#">Like</a></li>
+      <li>|</li>
+      <li><a href="#">Login</a></li>
+      <li>|</li>
+      <li><a href="#">Join</a></li>
+    </ul>
+  </div>
+
+  <hr id="headhr">
+
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">의류</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">침구 </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">간식</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">도구</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled">장난감</a>
+    </li>
+  </ul>
+
+
+  <hr id="mhr">
+
+  <section class="slider-wrapper">
+    <button class="slide-arrow" id="slide-arrow-prev">
+      &#8249;
+    </button>
+    <button class="slide-arrow" id="slide-arrow-next">
+      &#8250;
+    </button>
+    <ul class="slides-container" id="slides-container">
+      <li class="slide"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+    </ul>
+  </section>
+
+  <div class="products">
+    <h2>인기상품</h2>
+    <div class="product-list">
+      <a href="#" class="product">
+        <img src="images/pc1_0.png" width="270">
+        <div class="product-name">
+          [clothes]바나나 옷
+        </div>
+        <div class="product-price">29,000</div>
+      </a>
+
+      <a href="#" class="product">
+        <img src="images/ph1_0.png" width="270">
+        <div class="product-name">
+          [beds]먹구름 침대
+        </div>
+        <div class="product-price">50,000</div>
+      </a>
+
+      <a href="#" class="product">
+        <img src="images/pl1_0.png" width="270">
+        <div class="product-name">
+          [tools]튼튼한 하데스
+        </div>
+        <div class="product-price">15,000</div>
+      </a>
+
+      <a href="#" class="product">
+        <img src="images/pl6_0.png" width="270">
+        <div class="product-name">
+          [tools]대용량 플라스틱 밥그릇
+        </div>
+        <div class="product-price">8,000</div>
+      </a>
     </div>
-
-    <hr id="headhr">
-
-    <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">의류</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">침구 </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">간식</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">도구</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">장난감</a>
-        </li>
-      </ul>
-
-
-    <hr id="mhr">
-
-    <section class="slider-wrapper">
-      <button class="slide-arrow" id="slide-arrow-prev">
-        &#8249;
-      </button>
-      <button class="slide-arrow" id="slide-arrow-next">
-        &#8250;
-      </button>
-      <ul class="slides-container" id="slides-container">
-        <li class="slide"></li>
-        <li class="slide"></li>
-        <li class="slide"></li>
-      </ul>
-    </section>
-
     
+  </div>
 
 </body>
+
 </html>
