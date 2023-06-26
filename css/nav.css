@@ -1,0 +1,176 @@
+/*header-img*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+/*header-search*/
+.search {
+    background-color: antiquewhite;
+    border: 0px;
+    border-radius: 20px;
+    /* 원하는 둥글기 정도 */
+}
+
+#search_button {
+    background: none;
+    border: none;
+}
+
+/*header-ul*/
+.header ul {
+    /* display: inline-block; */
+    display: flex;
+    /*가로(flex)로 나란히 배치*/
+    list-style-type: none;
+    color: rgb(160, 160, 160);
+}
+
+.header li {
+    margin-right: 4px;
+}
+
+.header a {
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+}
+
+/*hr*/
+#mhr {
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid black;
+}
+
+@media screen and (max-width: 767px) {
+
+    /*모바일폰*/
+    #logo {
+        height: 60px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+
+    /*header-search*/
+    .search {
+        width: 180px;
+        height: 35px;
+        text-indent: 10px;
+        margin-top: 30px;
+        margin-left: -20px;
+    }
+
+    #search_button img {
+        width: 17px;
+        margin-left: -60px;
+    }
+
+    /*header-ul*/
+    .header ul {
+        /* display: inline-block; */
+        margin-left: -30px;
+        margin-top: 45px;
+        font-size: 12px;
+    }
+
+    .header li {
+        margin-right: 8px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+    /*태블릿*/
+
+    #logo {
+        height: 60px;
+        margin-left: 180px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+
+    /*header-search*/
+    .search {
+        width: 220px;
+        height: 35px;
+        text-indent: 20px;
+        margin-top: 30px;
+    }
+
+
+    #search_button img {
+        width: 20px;
+    }
+
+    /*header-ul*/
+    .header ul {
+        /* display: inline-block; */
+        margin-left: 5px;
+        margin-top: 45px;
+        font-size: 12px;
+    }
+
+    .header li {
+        margin-right: 10px;
+    }
+
+
+}
+
+@media screen and (min-width: 992px) {
+
+    /*데스크탑(노트북)*/
+    #logo {
+        height: 80px;
+        margin-left: 220px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    /*header-search*/
+    .search {
+        width: 270px;
+        height: 40px;
+        margin-left: 1px;
+        text-indent: 20px;
+        margin-top: 30px;
+    }
+
+
+
+    #search_button img {
+        width: 20px;
+    }
+
+    /*header-ul*/
+    .header ul {
+
+        margin-left: 5px;
+        margin-top: 45px;
+        font-size: 12px;
+
+    }
+
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    /* 데스크탑 */
+    #logo {
+        height: 100px;
+        margin-left: 280px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    /*header-search*/
+    .search {
+        width: 310px;
+    }
+
+}
