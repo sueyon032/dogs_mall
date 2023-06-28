@@ -25,12 +25,23 @@ a.product {
     /* 각 product 사이의 간격 설정 */
 }
 
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* footer ul {
+    margin-left: auto;
+} */
+
+.nav i {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
 @media screen and (max-width: 767px) {
 
     /*모바일폰*/
-
-
-
     .slider {
         height: 500px;
     }
