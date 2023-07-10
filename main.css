@@ -8,6 +8,7 @@
 .product-name {
     color: black;
     text-align: center;
+    margin-top: 10px;
 }
 
 a.product {
@@ -25,14 +26,27 @@ a.product {
     /* 각 product 사이의 간격 설정 */
 }
 
+.benners {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.benners a {
+    margin: 30px;
+}
+
+.benners img {
+    height: 110px;
+}
+
 .footer-right {
     display: flex;
     justify-content: flex-end;
 }
 
-/* footer ul {
-    margin-left: auto;
-} */
+.footer-right a {
+    color: black;
+}
 
 .nav i {
     margin-left: 15px;
@@ -65,18 +79,32 @@ a.product {
         align-items: center;
         margin-left: 50px;
     }
+
+    .benners {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .benners a {
+        margin: 10px;
+    }
+
+    .benners img {
+        height: px;
+    }
+
+    .benners img {
+        height: 80px;
+    }
 }
 
 @media screen and (min-width: 768px) {
+
     /*태블릿*/
-
-
-
     .slider {
         height: 500px;
     }
-
-
 
     .slide:nth-child(1) {
         background-image: url("images/screen_p1.png");
@@ -96,6 +124,16 @@ a.product {
         justify-content: center;
         align-items: center;
         margin-left: 50px;
+    }
+
+    .benners {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .benners a {
+        margin: 10px;
     }
 }
 
@@ -123,8 +161,6 @@ a.product {
 
 }
 
-
-@media screen and (min-width: 1200px) {}
 
 .slider-wrapper {
     margin: 0;
